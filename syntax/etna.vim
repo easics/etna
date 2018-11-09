@@ -4,27 +4,31 @@
 if exists("b:current_syntax")
   finish
 endif
+let b:current_syntax = "etna"
 
-syn keyword Title datastructure
+syn match Title "\[datastructure\]"
 
 syn match Type "bv<.*>"
 syn match Type "uint<.*>"
 syn match Type "int<.*>"
+syn match Type "integer<.*\.\..*>"
 syn keyword Type bool std_logic
 
-syn keyword cKeyword project_name union struct flat plat
+syn keyword etnaKeyword union struct enum flat plat const
+syn keyword etnaKeyword project_name default_c_type minimal
 
-syn match cDefine "--.*"
-syn match SpecialComment "--!.*$"
+syn keyword etnaFunction bitwidth
 
-" integer<x..y>
-" --=
-" bitwidth()
-" enum
-" const
-" default_c_type
-" minimal
-" include & define
+syn match etnaComment "//.*$"
+syn match etnaDefine "--.*"
+syn match etnaDocumentation "--!.*$"
+syn match etnaUserAttribute "--=.*"
 
+highlight def link etnaKeyword Statement
+highlight def link etnaComment Comment
+highlight def link etnaTodo Todo
+highlight def link etnaDefine Define
+highlight def link etnaFunction Type
+highlight def link etnaDocumentation MoreMsg
+highlight def link etnaUserAttribute SpecialKey
 
-let b:current_syntax = "vim"
