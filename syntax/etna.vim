@@ -24,6 +24,8 @@ syn match etnaDefine "--.*"
 syn match etnaDocumentation "--!.*$"
 syn match etnaUserAttribute "--=.*"
 
+syn match etnaInclude "#include "
+
 highlight def link etnaKeyword Statement
 highlight def link etnaComment Comment
 highlight def link etnaTodo Todo
@@ -31,4 +33,5 @@ highlight def link etnaDefine Define
 highlight def link etnaFunction Type
 highlight def link etnaDocumentation MoreMsg
 highlight def link etnaUserAttribute SpecialKey
+highlight def link etnaInclude Include
 
