@@ -1,0 +1,43 @@
+*etna* functionality for etna files
+
+Etna
+
+Functionality for the etna files.
+Includes detecting the filetype, syntax highlighting, indent rules, and more.
+
+===============================================================================
+CONTENTS                                                   *EtnaContents*
+
+  1. Usage                     |EtnaUsage|
+  2. Mappings                  |EtnaMappings|
+
+===============================================================================
+Section 1: Usage                                           *EtnaUsage*
+
+This plugin provides vim functionality for etna files. It contains the
+following standard vim subdirectories with functionality for etna:
+
+                                                           *EtnaFtdetect*
+ftdetect   Automatic filetype detection for etna files. This sets the filetype
+           to etna.
+
+                                                           *EtnaSyntax*
+syntax     This provides syntax highlighting for etna syntax.
+
+                                                           *EtnaIndent*
+indent     This defines indent rules for etna files.
+
+ftplugin   This defines the characters used for documentation. Defining these
+           characters as comments, allows vim to take some extra rules in
+           account when using standard vim commands.
+           E.g. when using <gq> to split a comment line, the resulting split
+           starts each line with the comment characters.
+
+                                                            *EtnaDoc*
+doc        This documentation.
+
+===============================================================================
+Section 2: Mappings                                        *EtnaMappings*
+
+For this plugin no mappings are needed.
+
