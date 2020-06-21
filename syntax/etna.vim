@@ -13,9 +13,12 @@ syn match Type "uint<.*>"
 syn match Type "int<.*>"
 syn match Type "integer<.*\.\..*>"
 syn keyword Type bool std_logic
+syn keyword Type var
 
 syn keyword etnaKeyword union struct enum flat plat const
 syn keyword etnaKeyword project_name default_c_type minimal
+syn keyword etnaKeyword parameter
+syn keyword etnaKeyword vhdl_use cpp_include
 
 syn keyword etnaFunction bitwidth
 
